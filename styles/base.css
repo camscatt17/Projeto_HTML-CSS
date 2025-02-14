@@ -79,9 +79,10 @@ main {
 
 main .hero img {
     width: 100%;
-    height: auto;
+    height: 75vh;
     max-width: 100%;
     object-fit: cover;
+    object-position: center;
     margin-block: 0.75rem;
 }
 
@@ -97,6 +98,11 @@ main .hero > div h1 {
     line-height: 1.1;
     margin: 0;
     text-wrap: balance;
+}
+
+.texto{
+    padding: 20px;
+    text-align: justify;
 }
 
 .link-cards {

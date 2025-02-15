@@ -1,0 +1,85 @@
+@import url("./container.css");
+@import url("./centaury-display.css");
+@import url("./base.css");
+
+.container-equipe-titulo{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    gap: 25px; /* Espaço entre o texto e a imagem */
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container-equipe-titulo img{
+    width: 60px;
+}
+
+
+.container-equipe{
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container-equipe-img{
+    width: 400px;
+}
+
+.container-setas{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 20px; /* Espaço entre as colunas */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+}
+
+.seta{
+    position: relative;
+    padding: 20px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 90%;
+    max-width: 400px;
+    margin: 10px 0; /* Espaçamento entre as setas */
+}
+
+/* Setas para a esquerda */
+.seta.esquerda {
+    background-color: var(--primary-color);
+    clip-path: polygon(0% 50%, 15% 0%, 100% 0%, 100% 100%, 15% 100%);
+    text-align: left;
+    justify-self: start;
+}
+
+/* Setas para a direita */
+.seta.direita {
+    background-color: var(--secondary-color);
+    clip-path: polygon(85% 0%, 100% 50%, 85% 100%, 0% 100%, 0% 0%);
+    text-align: right;
+    justify-self: end;
+}
+
+/* Ajuste para evitar sobreposição */
+.seta:nth-child(even) {
+    margin-top: -30px; /* Move levemente para cima */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .container-setas {
+        grid-template-columns: 1fr; /* Muda para coluna única */
+    }
+
+    .seta {
+        width: 100%;
+        text-align: center;
+        clip-path: none; /* Remove a forma de seta em telas pequenas */
+    }
+}

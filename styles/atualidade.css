@@ -26,6 +26,15 @@
     text-align: justify;
 }
 
+.imagens-pagina {
+    max-width: 50%;
+    height: auto;
+    display: block; /* Remove o comportamento inline da imagem */
+    margin: auto; /* Centraliza horizontalmente */
+    top: 50%;
+    left: 50%;
+}
+
 .container-conteudo{
     display: flex;
     justify-content: space-between;

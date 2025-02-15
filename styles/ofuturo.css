@@ -1,0 +1,93 @@
+@import url("./container.css");
+@import url("./centaury-display.css");
+@import url("./base.css");
+
+.container-texto-grafico{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    text-align: justify;
+}
+
+.grafico-container {
+    text-align: center;
+}
+
+.grafico-pizza {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #86E3CE 0% 33.9%,  /* Item 1 */
+        #67B0D1 33.9% 63.2%, /* Item 2 */
+        #4A90A4 63.2% 77.4%, /* Item 3 */
+        #365F8B 77.4% 88.9%, /* Item 4 */
+        #222C59 88.9% 100% /* Item 5 */
+    );
+    margin: 20px auto;
+}
+
+.legenda {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.legenda li {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.cor {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.cor1 { background: #86E3CE; }
+.cor2 { background: #67B0D1; }
+.cor3 { background: #4A90A4; }
+.cor4 { background: #365F8B; }
+.cor5 { background: #222C59; }
+
+.fontes{
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
+    color: #666;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+tbody tr {
+    background-color: #D6EAF8;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #b8d3e6;
+}

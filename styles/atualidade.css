@@ -1,0 +1,55 @@
+@import url("./container.css");
+@import url("./centaury-display.css");
+@import url("./base.css");
+
+.container-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%;
+}
+
+.titulo {
+    background-color:var(--secondary-color); 
+    padding: 15px 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+}
+
+.texto {
+    font-size: 18px;
+    color: #333;
+    font-family: sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.container-conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-conteudo-texto{
+    flex: 1;
+    font-size: 18px;
+    color: #333;
+    font-family: sans-serif;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 50%;
+}
+
+.container-conteudo-img{
+    flex: 1;
+    width: 50%;
+    height: 75vh;
+    max-width: 100%;
+    object-fit: cover;
+    margin-block: 0.75rem;
+}
+
+

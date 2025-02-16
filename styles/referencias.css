@@ -1,0 +1,31 @@
+@import url("./container.css");
+@import url("./centaury-display.css");
+@import url("./base.css");
+
+h2 {
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.minha-lista {
+    list-style:circle; 
+
+}
+
+.minha-lista li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.video-container {
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9; /* Mantém a proporção correta */
+    position: relative;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+}

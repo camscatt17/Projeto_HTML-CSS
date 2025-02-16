@@ -2,12 +2,13 @@
 @import url("./centaury-display.css");
 @import url("./base.css");
 
-p {
+.pagina-titulo {
     gap: 20px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2.5rem;
 }
 
-
-p img{
+.pagina-titulo img{
     width: 50px; 
     height: 50px;
 }

@@ -1,40 +1,61 @@
-@import url("./container.css");
-@import url("./centaury-display.css");
 @import url("./base.css");
 
-.equipe-titulo{
+.equipe-titulo {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
+    flex-direction: column;
+    align-items: center;
     font-size: 2.5rem;
     font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
-.equipe-titulo img{
-    width: 60px; 
+.equipe-titulo img {
+    width: 60px;
     height: 60px;
 }
 
-.equipe-descricao{
+.centered-img {
+    display: block; /* Garante que a imagem age como bloco para o alinhamento */
+    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona margem superior e inferior */
+    width: 60%; /* Ajuste o tamanho de acordo com o desejado */
+    height: auto; /* Mantém as proporções da imagem */
+}
+
+.equipe-descricao {
     display: flex;
-    text-align: justify;
+    flex-direction: column;
     align-items: center;
+    text-align: justify;
     gap: 2rem;
+    padding: 2rem 0;
 }
 
-.equipe-descricao-img{
-    width: 400px;
+.equipe-descricao-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
-.equipe-membros{
+.equipe-membros {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-.equipe-membros img{
-    width: 300px;
-    height: 300px;
+.equipe-membros div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.equipe-membros img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 20px;
+    transition: transform 0.3s;
 }
 
 .equipe-membros img:hover {
@@ -42,3 +63,31 @@
     cursor: pointer;
 }
 
+@media (min-width: 768px) {
+    .equipe-titulo {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .equipe-descricao {
+        flex-direction: row;
+    }
+
+    .equipe-membros {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .equipe-titulo {
+        font-size: 1.75rem;
+    }
+
+    .equipe-descricao {
+        padding: 1rem;
+    }
+
+    .equipe-membros img {
+        max-width: 90%;
+    }
+}

@@ -1,12 +1,19 @@
-@import url("./container.css");
-@import url("./centaury-display.css");
 @import url("./base.css");
 
-.container-texto-grafico{
+.imagens-pagina {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+.container-texto-grafico {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 40px;
     max-width: 1000px;
+    margin: 2rem auto;
     text-align: justify;
 }
 
@@ -19,11 +26,11 @@
     height: 300px;
     border-radius: 50%;
     background: conic-gradient(
-        #86E3CE 0% 33.9%,  /* Item 1 */
-        #67B0D1 33.9% 63.2%, /* Item 2 */
-        #4A90A4 63.2% 77.4%, /* Item 3 */
-        #365F8B 77.4% 88.9%, /* Item 4 */
-        #222C59 88.9% 100% /* Item 5 */
+        #86E3CE 0% 33.9%,
+        #67B0D1 33.9% 63.2%,
+        #4A90A4 63.2% 77.4%,
+        #365F8B 77.4% 88.9%,
+        #222C59 88.9% 100%
     );
     margin: 20px auto;
 }
@@ -37,7 +44,8 @@
     list-style: none;
     text-align: left;
     display: inline-block;
-    margin-top: 0px;
+    margin-top: 0;
+    padding-left: 0;
 }
 
 .legenda li {
@@ -60,7 +68,7 @@
 .cor4 { background: #365F8B; }
 .cor5 { background: #222C59; }
 
-.fontes{
+.fontes {
     font-size: 15px;
     font-style: italic;
     margin-top: 10px;
@@ -98,4 +106,43 @@ tbody tr {
 
 tbody tr:nth-child(even) {
     background-color: #b8d3e6;
+}
+
+
+@media (min-width: 768px) {
+    .container-titulo {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container-texto-grafico {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container-conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .texto {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .grafico-pizza {
+        width: 250px;
+        height: 250px;
+    }
+
+    th, td {
+        font-size: 16px;
+    }
+
 }
